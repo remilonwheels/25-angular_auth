@@ -3,23 +3,30 @@
     ng-if="landingCtrl.showSignup">
     <div class="join-inner">
       <signup></signup>
-      <p>already a member?</p>
-      <a href="/#/join#login"
-         ng-click="landingCtrl.showSignup=false">
+      <div class="clearfix"></div>
+      <span>
+        <p>already a member?</p>
+        <a href="/#/join#login"
+        ng-click="landingCtrl.showSignup=false">
         sign in here.
-      </a>
+        </a>
+      </span>
     </div>
   </div>
+
 
   <div class="join-container"
        ng-if="!landingCtrl.showSignup">
     <div class="join-inner">
       <login></login>
-      <p>want to sign up?</p>
-      <a href="/#/join#signup"
-         ng-click="landingCtrl.showSignup=true">
+      <div class="clearfix"></div>
+      <span>
+        <p>want to sign up?</p>
+        <a href="/#/join#signup"
+        ng-click="landingCtrl.showSignup=true">
         sign up here.
-      </a>
+        </a>        
+      </span>
     </div>
   </div>
 </section>

@@ -1,16 +1,27 @@
 @import '../theme/vars';
 
+$header-font-size: 3vh;
+
 header {
-  height: 8vh;
+  height: $height-header;
   background: $color-primary;
   color: $white;
 
+  img {
+    height: $height-header * .6;
+    float: left;
+    margin-top: $height-header * .2;
+    margin-right: $height-header * .2;
+  }
+
   h1 {
-    font-size: 3.1vh;
+    font-size: $header-font-size;
+    margin-top: ($height-header - $header-font-size) / 2;
   }
 
   .inner {
     width: 100% - 2 * $gutter-std;
     margin: 0 auto;
+    display: flex;
   }
 }

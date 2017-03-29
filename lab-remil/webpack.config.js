@@ -41,7 +41,8 @@ module.exports = {
         use: 'url-loader?limit=10000&name=fonts/[hash].[ext]',
       },
       {
-
+        test: /\.png$/,
+        use: 'url-loader',
       },
     ],
   },
