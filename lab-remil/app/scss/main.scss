@@ -1,0 +1,11 @@
+//:::: BASE ::::
+@import './lib/base/reset',
+        './lib/base/base';
+
+//:::: LAYOUT ::::
+@import './lib/layout/layout',
+        './lib/layout/header',
+        './lib/layout/main',
+        './lib/layout/footer';
+
+@import '../view/landing/landing';

@@ -1,0 +1,16 @@
+@import '../theme/vars';
+
+header {
+  height: 8vh;
+  background: $color-primary;
+  color: $white;
+
+  h1 {
+    font-size: 3.1vh;
+  }
+
+  .inner {
+    width: 100% - 2 * $gutter-std;
+    margin: 0 auto;
+  }
+}
