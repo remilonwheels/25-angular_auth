@@ -28,11 +28,27 @@ h2 {
 }
 
 .btn-std {
-  padding: $input-padding $input-padding * 6;
+  // padding: $input-padding $input-padding * 6;
+  padding: $input-padding 0;
+  display: inline-block;
+  width: 35vw;
   background: $color-primary;
   color: $white;
   border-radius: $border-radius;
+  margin: 0 auto;
+  text-align: center;
 }
+.btn-sm {
+  @extend .btn-std;
+  width: 20vw;
+}
+.btn-sm-secondary {
+  @extend .btn-sm;
+  background: $color-secondary * .8;
+  color: $color-primary;
+}
+
+
 
 .form {
   margin-top: $gutter-std;
