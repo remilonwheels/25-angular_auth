@@ -1,0 +1,26 @@
+@import '../../../scss/lib/theme/vars';
+@import '../gallery-item/gallery-item';
+
+.edit-gallery {
+  @extend .gallery-item;
+
+  fieldset {
+
+    input {
+      background: $color-primary * 2.5;
+      border: 1px solid $color-primary;
+    }
+
+    &:first-child {
+      input {
+        width: 88%;
+      }
+    }
+    &:last-child {
+      input {
+        width: 79%;
+      }
+    }
+  }
+
+}

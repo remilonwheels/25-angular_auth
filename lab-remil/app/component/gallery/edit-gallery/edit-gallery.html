@@ -3,19 +3,36 @@
     name="editGallery"
     ng-submit="editGalleryCtrl.updateGallery()"
     novalidate>
+    <div class="current-item">
+      <fieldset class="gallery-property">
+        <span class="item-label">name:</span>
 
-    <fieldset>
-      <span class="item-label">name:</span>
-      <input name="name" class="input-std" type="text"
+        <input name="name" class="input-sm" type="text"
         ng-model="editGalleryCtrl.gallery.name">
-    </fieldset>
+      </fieldset>
 
-    <fieldset>
-      <span class="item-label">description:</span>
-      <input name="desc" class="input-std" type="text"
+      <fieldset class="gallery-property">
+        <span class="item-label">description:</span>
+        <input name="desc" class="input-sm" type="text"
         ng-model="editGalleryCtrl.gallery.desc">
-    </fieldset>
+      </fieldset>
 
-    <button class="btn-std">update</button>
+    </div>
+    <div class="button-container">
+
+      <button class="btn-sm">update</button>
+    </div>
   </form>
 </section>
+
+<!-- <div class="current-item" ng-if="!galleryItemCtrl.showEditGallery">
+  <div class="gallery-property">
+    <span class="item-label">name:</span>
+    <span>{{ galleryItemCtrl.gallery.name }}</span>
+  </div>
+
+  <div class="gallery-property">
+    <span class="item-label">description:</span>
+    <span>{{ galleryItemCtrl.gallery.desc }}</span>
+  </div>
+</div> -->
