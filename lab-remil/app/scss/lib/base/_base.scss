@@ -11,6 +11,15 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight:900;
+}
+
+h2 {
+  font-size: 2.2vh;
+  margin: $gutter-std/2 0;
+}
+
 .input-std {
   width: 100%;
   margin: 0 0 $gutter-std 0;
@@ -23,4 +32,16 @@ a {
   background: $color-primary;
   color: $white;
   border-radius: $border-radius;
+}
+
+.form {
+  margin-top: $gutter-std;
+
+  h2 {
+    margin: $gutter-sm 0;
+  }
+
+  button {
+    float: right;
+  }
 }

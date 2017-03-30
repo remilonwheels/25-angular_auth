@@ -1,0 +1,33 @@
+@import '../../scss/lib/theme/vars';
+
+$header-font-size: 3vh;
+
+.navbar {
+  width: 100% - 2 * $gutter-std;
+  margin: 0 auto;
+  display: flex;
+
+  img {
+    height: $height-header * .6;
+    float: left;
+    margin-top: $height-header * .2;
+    margin-right: $height-header * .2;
+  }
+
+  h1 {
+    font-size: $header-font-size;
+    margin-top: ($height-header - $header-font-size) / 2;
+  }
+
+  div {
+    margin-left: auto;
+  }
+
+  button {
+    width: 10vh;
+    height: $height-header * .4;
+    margin-top: $height-header * .3;
+    background: $color-secondary;
+    color: $color-primary;
+  }
+}

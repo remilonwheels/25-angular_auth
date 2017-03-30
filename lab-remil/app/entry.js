@@ -13,6 +13,13 @@ const
 
 const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter]);
 
+// const angularLoaderObject = {
+//   config: {
+//     dir: './config',
+//     fn: file => ay
+//   },
+// };
+
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( key => {

@@ -1,7 +1,24 @@
 'use strict';
 
-module.exports = ['$log', HomeController];
+require('./_home.scss');
 
-function HomeController($log) {
+module.exports = ['$log', '$rootScope', 'galleryService', HomeController];
+
+function HomeController($log, $rootScope, galleryService) {
   $log.debug('HomeController');
+
+  this.galleries = [];
+
+  this.fetchGalleries = function() {
+    galleryService.fetchGalleries()
+    .then( galleries => {
+      this.galleries = galleries;
+    });
+  };
+
+  this.fetchGalleries();
+
+  $rootScope.$on('$locationChangeSuccess', () => {
+    this.fetchGalleries();
+  });
 }
