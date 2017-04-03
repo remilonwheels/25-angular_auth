@@ -1,0 +1,29 @@
+@import '../../../scss/lib/theme/vars';
+
+.upload-pic {
+
+  h3 {
+    margin-bottom: $gutter-sm;
+  }
+  input {
+    background: $color-primary * 2.3;
+    padding-top: $input-padding/2;
+    padding-bottom: $input-padding/2;
+    color: $white;
+  }
+
+  .upload-controls {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      padding: $input-padding;
+    }
+
+    button {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+  }
+}

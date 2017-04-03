@@ -1,0 +1,10 @@
+@import '../../../scss/lib/theme/vars';
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-bottom: $gutter-std;
+  }
+}

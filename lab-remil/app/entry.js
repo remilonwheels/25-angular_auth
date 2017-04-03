@@ -9,16 +9,10 @@ const
   pascalcase = require('pascalcase'),
   uiRouter = require('angular-ui-router'),
   ngTouch = require('angular-touch'),
-  ngAnimate = require('angular-animate');
+  ngAnimate = require('angular-animate'),
+  ngFileUpload = require('ng-file-upload');
 
-const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter]);
-
-// const angularLoaderObject = {
-//   config: {
-//     dir: './config',
-//     fn: file => ay
-//   },
-// };
+const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter, ngFileUpload]);
 
 
 let context = require.context('./config/', true, /\.js$/);

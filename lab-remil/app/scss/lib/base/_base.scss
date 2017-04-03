@@ -56,8 +56,6 @@ h2 {
   color: $color-primary;
 }
 
-
-
 .form {
   margin-top: $gutter-std;
 
@@ -68,4 +66,8 @@ h2 {
   button {
     float: right;
   }
+}
+
+.underline {
+  text-decoration: underline;
 }

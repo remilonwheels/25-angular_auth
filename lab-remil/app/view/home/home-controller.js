@@ -10,10 +10,17 @@ function HomeController($log, $rootScope, galleryService) {
   this.galleries = [];
 
   this.fetchGalleries = function() {
-    galleryService.fetchGalleries()
-    .then( galleries => {
-      this.galleries = galleries;
-    });
+   galleryService.fetchGalleries()
+   .then( galleries => {
+     this.galleries = galleries;
+     this.currentGallery = galleries[0];
+   });
+ };
+
+  this.galleryDeleteDone = function(gallery) {
+    if (this.currentGallery._id === gallery._id) {
+      this.currentGallery = null;
+    }
   };
 
   this.fetchGalleries();
