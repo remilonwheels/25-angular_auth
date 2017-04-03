@@ -96,13 +96,24 @@ function galleryService($q, $log, $http, authService) {
       return $http.put(url, galleryData, config);
     })
     .then( res => {
+      $log.log(service.galleries);
       for (let i=0; i < service.galleries.length; i++) {
-        let current = service.galleries[i];
-        if (current._id === galleryID) {
+        // let current = service.galleries[i];
+        if (service.galleries[i]._id === galleryID) {
+        // if (current._id === galleryID) {
           service.galleries[i] = res.data;
           break;
         }
       }
+
+      // for (let gallery of service.galleries) {
+      //   if (gallery._id === galleryID) {
+      //     service.galleries[service.galleries.indexservice.galleries.find(gallery)] = res.data;
+      //   }
+      // }
+
+      $log.log(service.galleries);
+
 
       return res.data;
     })

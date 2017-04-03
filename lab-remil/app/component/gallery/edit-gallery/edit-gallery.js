@@ -1,21 +1,14 @@
 'use strict';
 
-require('./_edit-gallery.scss');
+import './_edit-gallery.scss';
+import template from './edit-gallery.html';
+import {EditGalleryController as controller} from './edit-gallery-controller.js';
 
 module.exports = {
-  template: require('./edit-gallery.html'),
-  controller: ['$log', 'galleryService', EditGalleryController],
+  template,
+  controller,
   controllerAs: 'editGalleryCtrl',
   bindings: {
     gallery: '<',
   },
 };
-
-function EditGalleryController($log, galleryService) {
-  $log.debug('EditGalleryController');
-
-  this.updateGallery = function() {
-    $log.debug('editGalleryCtrl.updateGallery');
-    galleryService.updateGallery(this.gallery._id, this.gallery);
-  };
-}

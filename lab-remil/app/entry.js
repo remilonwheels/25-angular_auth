@@ -1,15 +1,14 @@
 'use strict';
 
-require('./scss/main.scss');
+import './scss/main.scss';
 
-const
-  path = require('path'),
-  angular = require('angular'),
-  camelcase = require('camelcase'),
-  pascalcase = require('pascalcase'),
-  uiRouter = require('angular-ui-router'),
-  ngTouch = require('angular-touch'),
-  ngAnimate = require('angular-animate');
+import path from 'path';
+import angular from 'angular';
+import camelcase from 'camelcase';
+import pascalcase from 'pascalcase';
+import uiRouter from 'angular-ui-router';
+import ngTouch from 'angular-touch';
+import ngAnimate from 'angular-animate';
 
 const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter]);
 
@@ -37,7 +36,7 @@ context = require.context('./service/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
-  ayogram.service(name, module);
+  ayogram.factory(name, module);
 });
 
 context = require.context('./component/', true, /\.js$/);
