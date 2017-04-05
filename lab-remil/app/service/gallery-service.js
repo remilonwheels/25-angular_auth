@@ -121,6 +121,7 @@ function galleryService($q, $log, $http, authService) {
       let config = {
         headers: {
           Authorization: `Bearer ${token}`,
+          Accept:'application/json',
         },
       };
 
