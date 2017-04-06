@@ -4,10 +4,12 @@
     <h2>Create New Swaggerry</h2>
     <create-gallery></create-gallery>
 
-    <h2>Galleries</h2>
+
+    <h2>Swaggeries</h2>
+    <input ng-model="homeCtrl.gallerySearchTerm" type="text" placeholder="Search Swaggeries" class="input-std">
     <ul>
       <gallery-item
-        ng-repeat="item in homeCtrl.galleries"
+        ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm"
         gallery="item"
         delete-done="homeCtrl.galleryDeleteDone(item)"
         ng-click="homeCtrl.currentGallery = item"
