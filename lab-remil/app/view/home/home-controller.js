@@ -18,6 +18,7 @@ function HomeController($log, $rootScope, galleryService) {
  };
 
   this.galleryDeleteDone = function(gallery) {
+    console.log('delete done gallery', gallery);
     if (this.currentGallery._id === gallery._id) {
       this.currentGallery = null;
     }

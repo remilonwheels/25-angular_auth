@@ -9,7 +9,7 @@
       <gallery-item
         ng-repeat="item in homeCtrl.galleries"
         gallery="item"
-        delete-done="homeCtrl.galleryDeleteDone(galleryData)"
+        delete-done="homeCtrl.galleryDeleteDone(item)"
         ng-click="homeCtrl.currentGallery = item"
         ></gallery-item>
     </ul>

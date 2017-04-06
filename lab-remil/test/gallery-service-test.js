@@ -69,6 +69,4 @@ describe('Gallery Service', function() {
       this.$rootScope.$apply();
     });
   });
-
-  // TODO: create another test for deleting a gallery
 });
