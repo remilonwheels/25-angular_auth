@@ -1,0 +1,36 @@
+.social-icons-css {
+  display: flex;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.social-icon {
+    background-image: url(./social-icons.png);
+    background-repeat: no-repeat;
+}
+
+.social-icon-github {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.social-icon-linkedin {
+    width: 30px;
+    height: 30px;
+    background-position: -45px -5px;
+}
+
+.social-icon-tumblr {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -45px;
+}
+
+.social-icon-twitter {
+    width: 30px;
+    height: 30px;
+    background-position: -45px -45px;
+}

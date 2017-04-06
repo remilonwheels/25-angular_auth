@@ -2,7 +2,7 @@
   <div class="current-item" ng-if="!galleryItemCtrl.showEditGallery">
     <div class="gallery-property">
       <span class="item-label">name:</span>
-      <span>{{ galleryItemCtrl.gallery.name }}</span>
+      <span>{{ galleryItemCtrl.gallery.name | swagCase }}</span>
     </div>
 
     <div class="gallery-property">

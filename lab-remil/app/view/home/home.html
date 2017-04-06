@@ -6,7 +6,7 @@
 
 
     <h2>Swaggeries</h2>
-    <input ng-model="homeCtrl.gallerySearchTerm" type="text" placeholder="Search Swaggeries" class="input-std">
+    <input ng-model="homeCtrl.gallerySearchTerm" type="text" placeholder="search dem swaggeries" class="input-std">
     <ul>
       <gallery-item
         ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm"
