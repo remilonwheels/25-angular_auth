@@ -20,9 +20,13 @@ describe('Gallery Item Component', function(){
           desc: 'test description',
           pics: [],
         },
+        deleteDone: function(data){
+          expect(data.galleryData._id).toEqual('12345');
+        },
       };
 
       let galleryItemCtrl = this.$componentController('galleryItem', null, mockBindings);
+      galleryItemCtrl.deleteDone({galleryData: galleryItemCtrl.gallery});
 
       this.$rootScope.$apply();
     });
@@ -42,12 +46,15 @@ describe('Gallery Item Component', function(){
         desc: 'test description',
         pics: [],
       },
+      deleteDone: function(data){
+        expect(data._id).toEqual(mockBindings.gallery._id);
+      },
     };
 
     this.$httpBackend.expectDELETE(url, headers).respond(204);
 
     let galleryItemCtrl = this.$componentController('galleryItem', null, mockBindings);
-    galleryItemCtrl.deleteGallery();
+    galleryItemCtrl.deleteGallery(mockBindings.gallery);
 
     this.$httpBackend.flush();
     this.$rootScope.$apply();
