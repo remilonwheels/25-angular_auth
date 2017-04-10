@@ -10,9 +10,10 @@ const
   uiRouter = require('angular-ui-router'),
   ngTouch = require('angular-touch'),
   ngAnimate = require('angular-animate'),
-  ngFileUpload = require('ng-file-upload');
+  ngFileUpload = require('ng-file-upload'),
+  uiBootstrap = require('angular-ui-bootstrap');
 
-const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter, ngFileUpload]);
+const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter, ngFileUpload, uiBootstrap]);
 
 
 let context = require.context('./config/', true, /\.js$/);

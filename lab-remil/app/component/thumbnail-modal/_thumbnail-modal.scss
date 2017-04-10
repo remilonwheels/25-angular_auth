@@ -1,0 +1,11 @@
+@import '../../scss/lib/theme/vars';
+
+.thumbnail-modal {
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

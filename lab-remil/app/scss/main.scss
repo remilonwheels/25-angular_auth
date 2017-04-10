@@ -1,10 +1,12 @@
 //:::: BASE ::::
 @import './lib/base/reset',
-        './lib/base/base';
+        './lib/base/base',
+        './lib/bootstrap/custom-bootstrap';
 
 //:::: LAYOUT ::::
 @import './lib/layout/layout',
         './lib/layout/header',
         './lib/layout/main',
         './lib/layout/footer';
- 
+
+//:::: BOOTSTRAP :::::
