@@ -42,9 +42,13 @@ module.exports = {
           use: ['css-loader', 'sass-loader'],
         }),
       },
-      { //:::: fonts ::::
-        test: /\.(eot|woff|tff|svg).*/,
-        use: 'url-loader?limit=10000&name=fonts/[hash].[ext]',
+      // { //:::: fonts ::::
+      //   test: /\.(eot|woff|tff|svg).*/,
+      //   use: 'url-loader?limit=10000&name=fonts/[hash].[ext]',
+      // },
+      {
+        test: /\.(ttf|eot|svg|woff|woff2)(\?.+)?$/,
+        use: 'file-loader',
       },
       {
         test: /\.png$/,

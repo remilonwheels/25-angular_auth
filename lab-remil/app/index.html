@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ayoGRAM</title>
   </head>
+  <body>
   <header>
     <navbar></navbar>
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        <h2 flex md-truncate>ayogram</h2>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
   </header>
-  <body>
     <main>
       <ui-view></ui-view>
     </main>
-  </body>
   <footer>
     <social-icons social-icons-title="Contact"></social-icons>
   </footer>
+</body>
 </html>

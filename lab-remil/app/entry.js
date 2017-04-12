@@ -1,6 +1,9 @@
 'use strict';
 
 require('./scss/main.scss');
+require('angular-material/angular-material.scss');
+
+global.jQuery = require('jquery');
 
 const
   path = require('path'),
@@ -11,9 +14,10 @@ const
   ngTouch = require('angular-touch'),
   ngAnimate = require('angular-animate'),
   ngFileUpload = require('ng-file-upload');
+require('angular-aria');
+require('angular-material');
 
-const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter, ngFileUpload]);
-
+const ayogram = angular.module('ayogram', [ngTouch, ngAnimate, uiRouter, ngFileUpload, require('./vendor/lumx'), 'ngMaterial']);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( key => {
